@@ -17,14 +17,27 @@
         <article>
             <button  onclick="startLocalCam()" class="btn btn-start btn-success">Start Camara</button>
             <button  onclick="stopLocalCam()" class="btn btn-stop btn-danger">Stop Camara</button>
+            <button  onclick="spinVideo()" class="btn btn-stop btn-info">Spin Video</button>
         </article>
-        <video class="fa-spinner fa-spin" id="localVideo">
+        <video class="fa-spinner" >
+
+        </video>
+
+    </section>
+    <section class="col-lg-12" id="remoteVideoSection">
+        <article>
+            <button  onclick="call()" class="btn btn-start btn-success">Start Stream</button>
+            <button  onclick="hangup()" class="btn btn-stop btn-danger">Stop Stream</button>
+
+        </article>
+        <video >
 
         </video>
 
     </section>
 </main>
 
-<script src="./client.js"></script>
+<script src="./localMediaStream.js"></script>
+<script src="./remoteMediaStream.js"></script>
 </body>
 </html>

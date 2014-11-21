@@ -1,10 +1,19 @@
-
-
 var local ={};
 local.$section = $('#localVideoSection');
 local.$btnStart =  local.$section.find('.btn-start');
 local.$btnStop =  local.$section.find('.btn-stop');
-local.$video = local.$section.find("video")
+local.$video = local.$section.find("video");
+local.$btnSpin = local.$section.find("btn-spin");
+local.localMediaStream = null;
+local.servers = null;
+local.peerConnection = new RTCPeerConnection(local.servers);
+
+window.local = local;
+
+function spinVideo (){
+    local.$video.toggleClass("fa-spin")
+}
+
 function localVideoSuccessCallback(stream){
     console.log(local.$video[0])
     attachMediaStream(local.$video[0],stream);
@@ -12,12 +21,9 @@ function localVideoSuccessCallback(stream){
     local.$video[0] = stream;
 
 }
-
 function  localVideoErrorCallback(){
     alert("localVideoErrorCallback")
 }
-
-
 function startLocalCam(){
     local.$btnStart.attr('disabled',true);
     local.$btnStop.removeAttr('disabled');
@@ -36,7 +42,6 @@ function startLocalCam(){
         throw new Error("No getUserMedia")
     }
 }
-
 function stopLocalCam(){
     local.$btnStart.removeAttr('disabled');
     local.$btnStop.attr('disabled',true);
