@@ -1,0 +1,10 @@
+# Created by .gitignore support plugin (hsz.mobi)
+### EPiServer template
+######################
+## EPiServer Files
+######################
+*License.config
+
+
+.idea
+bower_components

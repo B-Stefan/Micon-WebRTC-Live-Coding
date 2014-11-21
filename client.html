@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Tasdasdest</title>
+    <script src="./bower_components/adapter.js/samples/web/js/adapter.js"></script>
+    <script src="./bower_components/jquery/dist/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+</head>
+<body>
+
+<main class="container">
+    <section class="col-lg-12" id="localVideoSection">
+        <article>
+            <button  onclick="startLocalCam()" class="btn btn-start btn-success">Start Camara</button>
+            <button  onclick="stopLocalCam()" class="btn btn-stop btn-danger">Stop Camara</button>
+        </article>
+        <video class="fa-spinner fa-spin" id="localVideo">
+
+        </video>
+
+    </section>
+</main>
+
+<script src="./client.js"></script>
+</body>
+</html>

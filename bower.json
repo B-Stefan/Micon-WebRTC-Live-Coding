@@ -1,0 +1,22 @@
+{
+  "name": "Micon-WebRTC-Live-Coding",
+  "version": "0.0.0",
+  "homepage": "https://github.com/B-Stefan/Micon-WebRTC-Live-Coding",
+  "authors": [
+    "Stefan B <Stefan.bie@live.de>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "require": "*",
+    "adapter.js": "*",
+    "bootstrap": "*",
+    "font-awesome": "~4.2.0"
+  }
+}
